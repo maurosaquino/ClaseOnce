@@ -1,3 +1,20 @@
+function mostrarIngreso(){
+
+$.ajax({url:"nexo.php",type:"post",data:{accion:"mIng"}}).then(
+	function(exito){
+
+		$("#contenedor").html(exito);
+
+	},function(error){
+
+		$("#contenedor").html(error);
+			
+
+	});
+
+
+}
+
 function ingresar(){
 
 	var n =  $("#cantante").val();
@@ -21,8 +38,6 @@ function ingresar(){
 
 }
 
-
-
 function mostrar(){
 
 	$.ajax({url:"nexo.php",type:"post",data:{accion:"mostrar"}}).then(
@@ -38,6 +53,4 @@ function mostrar(){
 			
 
 	});
-
-
 }

@@ -46,6 +46,18 @@
 		VAR_DUMP($cds);
 
 
+		}elseif($_POST["accion"]=="mIng"){
+
+		echo '
+		<form>
+		<input type="text" id="cantante">
+		<input type="text" id="ano">
+		<input type="text" id="titulo">
+		<button type="button" onclick="ingresar()">Ingresar</button>
+		</form>';
+
+
+
 		}else{
 
 		$cds = $client->call('ObtenerTodosLosCds', array());
